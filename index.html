@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Serverless Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">AWS Serverless Project</span>
+      <h1>Serverless Contact Form</h1>
+      <p>
+        A responsive contact form powered by AWS Lambda and API Gateway.
+      </p>
+
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Serverless API Ready
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="contact-section">
+
+      <div class="contact-info">
+        <span class="section-label">Contact</span>
+
+        <h2>Send a message</h2>
+
+        <p>
+          Complete the form and the message will be processed
+          through a serverless AWS backend.
+        </p>
+
+        <div class="feature-list">
+
+          <div class="feature">
+            <span>⚡</span>
+            <div>
+              <h3>Serverless</h3>
+              <p>AWS Lambda processes each request.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <span>🔗</span>
+            <div>
+              <h3>API Gateway</h3>
+              <p>Secure API endpoint connects the form to AWS.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <span>✉️</span>
+            <div>
+              <h3>Email Notification</h3>
+              <p>Messages can trigger automated email notifications.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="form-card">
+
+        <form id="contactForm">
+
+          <div class="form-row">
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="name"
+                required
+                placeholder=" "
+              >
+              <label for="name">Your Name</label>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder=" "
+              >
+              <label for="email">Email Address</label>
+            </div>
+
+          </div>
+
+          <div class="input-group">
+            <input
+              type="text"
+              id="subject"
+              required
+              placeholder=" "
+            >
+            <label for="subject">Subject</label>
+          </div>
+
+          <div class="input-group textarea-group">
+            <textarea
+              id="message"
+              maxlength="500"
+              required
+              placeholder=" "
+            ></textarea>
+
+            <label for="message">Message</label>
+
+            <div class="char-count">
+              <span id="charCount">0</span>/500
+            </div>
+          </div>
+
+          <button id="submitButton" type="submit">
+            <span class="button-text">Send Message</span>
+            <span class="loader hidden"></span>
+          </button>
+
+          <div id="formStatus" class="form-status hidden"></div>
+
+        </form>
+
+      </div>
+
+    </section>
+
+    <section class="architecture">
+
+      <span class="section-label">Architecture</span>
+
+      <h2>How it works</h2>
+
+      <div class="architecture-flow">
+
+        <div class="architecture-card">
+          <span>📝</span>
+          <h3>Contact Form</h3>
+          <p>User submits a message.</p>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="architecture-card">
+          <span>🌐</span>
+          <h3>API Gateway</h3>
+          <p>Receives the HTTPS request.</p>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="architecture-card">
+          <span>λ</span>
+          <h3>AWS Lambda</h3>
+          <p>Processes the form data.</p>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="architecture-card">
+          <span>✉️</span>
+          <h3>Email</h3>
+          <p>Sends the notification.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Built with HTML, CSS, JavaScript and AWS Serverless Services</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
