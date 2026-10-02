@@ -7,7 +7,8 @@ const loader = document.querySelector(".loader");
 const formStatus = document.getElementById("formStatus");
 
 // Replace this later with your real API Gateway endpoint
-const API_URL = "YOUR_API_GATEWAY_URL_HERE";
+const API_URL =
+  "https://ov1o946o96.execute-api.eu-west-2.amazonaws.com/default/serverless-contact-form";
 
 // Character counter
 messageInput.addEventListener("input", function () {
