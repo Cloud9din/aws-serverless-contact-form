@@ -6,6 +6,10 @@ A serverless contact form built with HTML, CSS, JavaScript and AWS services incl
 
 https://cloud9din.github.io/aws-serverless-contact-form/
 
+## Screenshot
+
+![AWS Serverless Contact Form](screenshot.png)
+
 ## Features
 
 - Responsive contact form
@@ -19,6 +23,7 @@ https://cloud9din.github.io/aws-serverless-contact-form/
 - Amazon SES email integration
 - CORS configuration
 - Environment variables for email settings
+- Responsive design for desktop and mobile
 
 ## Architecture
 
@@ -40,44 +45,53 @@ Contact Form → API Gateway → AWS Lambda → Amazon SES
 ## How It Works
 
 1. The user completes the contact form.
-2. JavaScript sends the form data to API Gateway.
-3. API Gateway invokes the Lambda function.
-4. Lambda validates and processes the request.
-5. Amazon SES handles the email notification.
-6. The website displays a success or error message.
+2. JavaScript validates the form data.
+3. The form sends a POST request to Amazon API Gateway.
+4. API Gateway invokes the AWS Lambda function.
+5. Lambda processes and validates the submitted data.
+6. Amazon SES handles the email notification.
+7. The website displays a success or error message.
 
 ## AWS Configuration
 
 The project uses:
 
+- AWS Lambda environment variables
 - IAM execution permissions
-- Lambda environment variables
 - API Gateway HTTP API
 - CORS configuration
-- SES verified email identity
+- Amazon SES verified email identity
 
-## Screenshot
+## Troubleshooting
 
-Add your project screenshot here:
+During development, I worked through issues including:
 
-![AWS Serverless Contact Form](screenshot.png)
+- API Gateway CORS configuration
+- Browser preflight requests
+- Lambda permissions
+- SES verification
+- Environment variables
+- Frontend-to-backend API connectivity
+- Testing Lambda functions
+- Browser developer tools and network debugging
 
 ## What I Learned
 
 This project helped me practise:
 
-- Building serverless applications
-- Connecting frontend JavaScript to an API
-- AWS Lambda development
-- API Gateway configuration
-- IAM permissions
-- CORS troubleshooting
-- Environment variables
-- Amazon SES email integration
-- Debugging using browser developer tools and AWS Lambda testing
+- Building a serverless application
+- Connecting JavaScript to a cloud API
+- Creating and testing AWS Lambda functions
+- Configuring API Gateway
+- Working with IAM permissions
+- Using environment variables
+- Configuring CORS
+- Integrating Amazon SES
+- Troubleshooting browser and AWS errors
+- Deploying a live project with GitHub Pages
 
 ## Project Status
 
-The serverless frontend, API Gateway and Lambda integration are working successfully.
+The frontend, API Gateway and Lambda integration are working successfully.
 
 Amazon SES is configured and accepting email requests. Email deliverability is being further tested and refined.
